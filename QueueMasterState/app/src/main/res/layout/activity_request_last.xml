@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.RequestPriActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="16dp">
+        <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metodo(s) por el cual quiero ser comunicado acerca de mi turno"
+                android:textSize="25sp"/>
+
+        <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins">
+
+
+            <CheckBox
+                    android:id="@+id/cb_imp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Impresión"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18sp"
+                    android:checked="true"/>
+            <CheckBox
+                    android:id="@+id/cb_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Email"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18sp"/>
+            <CheckBox
+                    android:id="@+id/cb_sms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="SMS"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18sp"/>
+            <CheckBox
+                    android:id="@+id/cb_whats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="WhatsApp"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18sp"/>
+
+        </GridLayout>
+
+        <ListView
+                android:id="@+id/lv_text"
+                android:divider="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:id="@+id/bt_generate"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/generate"/>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
